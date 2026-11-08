@@ -1,4 +1,5 @@
 # AGRIQUIZ 🌱
+
 ### Interactive Quiz Engine with Analytics Tuned for the Agriculture Board Examination
 
 AGRIQUIZ is a web-based review and assessment platform designed to help Agriculture students prepare for the **Agriculturist Licensure Examination (ALE)**. It provides centralized access to reviewer materials, interactive practice quizzes, immediate feedback, and performance analytics to support students in monitoring their learning progress.
@@ -57,6 +58,7 @@ AGRIQUIZ covers the following major subject areas:
 ## 💻 Installation and Setup
 
 ### Requirements
+
 - XAMPP
 - PHP
 - MySQL
@@ -99,7 +101,7 @@ AGRIQUIZ is designed to run on PHP-compatible web hosting with MySQL database su
 
 The project uses GitHub for source code management and InfinityFree for web hosting.
 
-Live Website: https://agriquiz.infinityfreeapp.com/getstarted.php
+**Live Website:** https://agriquiz.infinityfreeapp.com/getstarted.php
 
 ## 📊 Project Scope
 
@@ -109,7 +111,7 @@ Its analytics are based on recorded quiz performance and do not include attendan
 
 ## 👥 Developers
 
-Developed by Readyn Bais and team project of the **Bachelor of Science in Information Technology (BSIT)** program at:
+Developed by **Readyn Bais and team** as a capstone project under the **Bachelor of Science in Information Technology (BSIT)** program at:
 
 **West Visayas State University – Calinog Campus**  
 School of Information and Communications Technology  
