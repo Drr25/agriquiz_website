@@ -1,0 +1,190 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+:root {
+    --green: #198754;
+    --green-dark: #146c43;
+    --green-light: #d1f0e0;
+    --bg: #f4f9f6;
+    --text: #1a2e22;
+    --text-mid: #3a5c47;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    max-width: 10000px;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* animated grid background */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(25, 135, 84, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(25, 135, 84, .05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 18s linear infinite;
+}
+
+/* soft glow */
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: -200px;
+    right: -200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(25, 135, 84, .12), transparent 70%);
+}
+
+/* content container */
+.hero-inner {
+    max-width: 780px;
+    position: relative;
+    z-index: 2;
+    animation: floatUp 1s ease;
+}
+
+/* badge */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green-light);
+    color: var(--green);
+    padding: 7px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    animation: fadeUp .7s ease forwards .2s;
+    opacity: 0;
+}
+
+/* title */
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -.5px;
+    margin-bottom: 24px;
+    animation: fadeUp .7s ease forwards .4s;
+    opacity: 0;
+}
+
+.hero h1 span {
+    color: var(--green);
+
+}
+
+
+/* paragraph */
+.hero p {
+    font-size: 1.15rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+    max-width: 600px;
+    margin: 0 auto 42px;
+    animation: fadeUp .7s ease forwards .6s;
+    opacity: 0;
+}
+
+/* button */
+.btn-primary {
+    position: relative;
+    cursor: pointer;
+    background: var(--green);
+    color: #fff;
+    padding: 15px 34px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 28px rgba(25, 135, 84, .35);
+    transition: .25s;
+    animation: fadeUp .7s ease forwards .8s;
+    opacity: 0;
+}
+
+.btn-primary:hover {
+    background: var(--green-dark);
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(25, 135, 84, .45);
+}
+
+.btn-primary i {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover i {
+    transform: translateX(4px);
+}
+
+/*  ANIMATIONS  */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* slow floating entrance */
+@keyframes floatUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+/* moving grid */
+@keyframes gridMove {
+    from {
+        background-position: 0 0, 0 0;
+    }
+
+    to {
+        background-position: 50px 50px, 50px 50px;
+    }
+}
+
+/* responsive */
+@media(max-width:768px) {
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
