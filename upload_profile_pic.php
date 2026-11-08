@@ -74,4 +74,4 @@ mysqli_close($conn);
 
 $_SESSION['profile_flash'] = 'Profile picture updated successfully.';
 header('Location: profile.php');
-exit;
+exit;   
